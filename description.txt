@@ -1,0 +1,17 @@
+①configureStoreでReduxストアを作成します
+
+configureStore reducer関数を名前付き引数として受け入れる
+configureStore適切なデフォルト設定でストアを自動的にセットアップする
+
+②Redux ストアを React アプリケーション コンポーネントに提供する
+あなたの周りにReact-Redux<Provider>コンポーネントを置きます<App />
+Reduxストアを次のように渡します<Provider store={store}>
+
+でRedux「スライス」レデューサーを作成しますcreateSlice
+createSlice文字列名、初期状態、および名前付きレデューサー関数を使用して呼び出す
+Reducer 関数は、Immer を使用して状態を「変更」する場合があります
+
+生成されたスライス レデューサーとアクション クリエーターをエクスポートする
+React コンポーネントでReact-ReduxuseSelector/useDispatchフックを使用する
+useSelectorフックを使用してストアからデータを読み取る
+dispatchフックで関数を取得し、useDispatch必要に応じてアクションをディスパッチします
